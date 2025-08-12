@@ -1,4 +1,4 @@
-`require("dotenv").config();
+require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -35,6 +35,8 @@ const noticeRoutes = require("./routes/noticeRoutes");
 const heroRoutes = require("./routes/heroRoutes");
 const uploadRoutes = require("./routes/uploads");
 const fileRoutes = require("./routes/files");
+// const teamRoutes = require("./routes/teamRoutes");
+
 
 // ✅ Use routes
 app.use("/api/auth", authRoutes);
@@ -45,6 +47,7 @@ app.use("/api/notices", noticeRoutes);
 app.use("/api/heroslides", heroRoutes);
 app.use("/api/uploads", uploadRoutes);
 app.use("/api/files", fileRoutes);
+// app.use("/api/team", teamRoutes);
 
 // ✅ Test Route
 app.get("/", (req, res) => {
